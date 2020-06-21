@@ -3,7 +3,8 @@ package org.wcci.blog;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import java.util.Set;
+import javax.persistence.ManyToMany;
+import java.util.Collection;
 
 @Entity
 public class Author {
@@ -13,11 +14,12 @@ public class Author {
     private Long id;
     private String firstName;
     private String lastName;
-    private Set<Post> posts;
+    @ManyToMany
+    private Collection<Post> posts;
 
     public Author() {}
 
-    public Author(String firstName, String lastName, Set<Post> posts) {
+    public Author(String firstName, String lastName, Collection<Post> posts) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.posts = posts;
@@ -35,7 +37,7 @@ public class Author {
         return lastName;
     }
 
-    public Set<Post> getPosts() {
+    public Collection<Post> getPosts() {
         return posts;
     }
 }

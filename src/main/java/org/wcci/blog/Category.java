@@ -3,7 +3,7 @@ package org.wcci.blog;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import java.util.Set;
+import java.util.Collection;
 
 @Entity
 public class Category {
@@ -12,11 +12,11 @@ public class Category {
     @GeneratedValue
     private Long id;
     private String name;
-    private Set<Post> posts;
+    private Collection<Post> posts;
 
     protected Category(){}
 
-    public Category(String name, Set<Post> posts) {
+    public Category(String name, Collection<Post> posts) {
         this.name = name;
         this.posts = posts;
     }
@@ -29,7 +29,7 @@ public class Category {
         return name;
     }
 
-    public Set<Post> getPosts() {
+    public Collection<Post> getPosts() {
         return posts;
     }
 }

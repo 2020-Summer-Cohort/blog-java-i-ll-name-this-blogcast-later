@@ -3,7 +3,7 @@ package org.wcci.blog;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
-import java.util.Set;
+import java.util.Collection;
 
 @Entity
 public class Post {
@@ -13,14 +13,15 @@ public class Post {
     private Long id;
     private String title;
     private String description;
-    private Set<Author> authors;
+    @ManyToMany
+    private Collection<Author> authors;
     private LocalDateTime publishDate;
-    private Set<Category> categories;
-    private Set<Tag> tags;
+    private Collection<Category> categories;
+    private Collection<Tag> tags;
 
     protected Post(){}
 
-    public Post(String title, String description, Set<Author> authors, LocalDateTime publishDate, Set<Category> categories, Set<Tag> tags) {
+    public Post(String title, String description, Collection<Author> authors, LocalDateTime publishDate, Collection<Category> categories, Collection<Tag> tags) {
         this.title = title;
         this.description = description;
         this.authors = authors;
@@ -41,7 +42,7 @@ public class Post {
         return description;
     }
 
-    public Set<Author> getAuthors() {
+    public Collection<Author> getAuthors() {
         return authors;
     }
 
@@ -49,11 +50,11 @@ public class Post {
         return publishDate;
     }
 
-    public Set<Category> getCategories() {
+    public Collection<Category> getCategories() {
         return categories;
     }
 
-    public Set<Tag> getTags() {
+    public Collection<Tag> getTags() {
         return tags;
     }
 }
