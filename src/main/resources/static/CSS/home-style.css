@@ -1,0 +1,91 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-size: 20px;
+    font-family: "brandon"-grotesque;
+    line-height: 1.8em;
+    color: red;
+    scroll-behavior: smooth;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.holding_container_1 {
+    width: 2500px;
+    max-width: 90%;
+    height: 300px;
+    display: flex;
+    padding-left: 50px;
+    box-sizing: content-box;
+    flex-direction: row;
+    margin-bottom: 200px;
+}
+
+.internal_container_1a {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    background-color: teal;
+    height: 300px;
+    padding: 50px;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* .internal_container_1b{
+    flex: 1;
+    background-image: url("IMAGES/mountain-fire.jpg");
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 100%;
+    font-size: 20px;
+
+} */
+
+.holding_container_2 {
+    width: 2500px;
+    max-width: 90%;
+    height: 300px;
+    display: flex;
+    padding-left: 50px;
+    box-sizing: content-box;
+    flex-direction: row;
+    margin-bottom: 200px;
+    letter-spacing: 0.0625em;
+    margin-bottom: 200px;
+}
+
+/* .internal_container_2a {
+    flex: 1;
+    background-image: url("IMAGES/mountain-fire.jpg");
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 100%;
+    font-size: 20px;
+} */
+
+.internal_container_2b{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    background-color: teal;
+    height: 300px;
+    padding: 50px;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.home_pics {
+    position: relative;
+    background-position: center;
+  
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
