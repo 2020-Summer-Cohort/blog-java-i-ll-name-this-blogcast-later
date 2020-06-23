@@ -10,7 +10,6 @@ body, html {
 
 }
 
-
 .headimg, 
 .bodyimg1, 
 .bodyimg2{
@@ -42,7 +41,7 @@ ul li{
 }
 
 .headimg{
-    background-image: url("/static/IMAGES/header-mma.jpg");
+    background-image: url("../IMAGES/header-mma.jpg");
     min-height: 100%;
 }
 
@@ -69,7 +68,7 @@ ul li{
   }
 
   .bodyimg1{
-      background-image: url("/static/IMAGES/silva.jpg");
+      background-image: url("../IMAGES/silva.jpg");
       min-height: 400px;
       margin-top: auto;
   }
@@ -150,7 +149,7 @@ ul li{
     background-image: linear-gradient(to right, #303030 0%, #1a1a1a 50%, #000000 100%)
 }
   .bodyimg2{
-    background-image: url("/static/IMAGES/holm.jpg");
+    background-image: url("../IMAGES/holm.jpg");
     min-height: 700px;
   }
   
