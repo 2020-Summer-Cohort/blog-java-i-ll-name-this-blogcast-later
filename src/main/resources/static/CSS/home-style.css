@@ -2,90 +2,238 @@ body, html {
     height: 100%;
     margin: 0;
     font-size: 20px;
-    font-family: "brandon"-grotesque;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 200px;
     line-height: 1.8em;
-    color: red;
+    color: #665;
     scroll-behavior: smooth;
-}
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-}
-
-.holding_container_1 {
-    width: 2500px;
-    max-width: 90%;
-    height: 300px;
-    display: flex;
-    padding-left: 50px;
-    box-sizing: content-box;
-    flex-direction: row;
-    margin-bottom: 200px;
-}
-
-.internal_container_1a {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    background-color: teal;
-    height: 300px;
-    padding: 50px;
-    font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
 }
 
 
-/* .internal_container_1b{
-    flex: 1;
-    background-image: url("IMAGES/mountain-fire.jpg");
-    background-repeat: no-repeat;
-    height: 300px;
-    width: 100%;
-    font-size: 20px;
-
-} */
-
-.holding_container_2 {
-    width: 2500px;
-    max-width: 90%;
-    height: 300px;
-    display: flex;
-    padding-left: 50px;
-    box-sizing: content-box;
-    flex-direction: row;
-    margin-bottom: 200px;
-    letter-spacing: 0.0625em;
-    margin-bottom: 200px;
-}
-
-/* .internal_container_2a {
-    flex: 1;
-    background-image: url("IMAGES/mountain-fire.jpg");
-    background-repeat: no-repeat;
-    height: 300px;
-    width: 100%;
-    font-size: 20px;
-} */
-
-.internal_container_2b{
-    display: flex;
-    align-items: center;
-    flex: 1;
-    background-color: teal;
-    height: 300px;
-    padding: 50px;
-    font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.home_pics {
+.headimg, 
+.bodyimg1, 
+.bodyimg2{
     position: relative;
+    opacity: 1;
     background-position: center;
-  
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
+nav{
+    font-size: 200px;
+    font-weight: 30px;
+}
+
+ul{
+    list-style: none;
+    text-align: center;
+    color: #fff;
+    margin-top: 0px;
+    font-family: "Terminal";
+}
+
+ul li{
+    display: inline;
+    padding: 40px;
+    font-size: x-large;
+}
+
+.headimg{
+    background-image: url("/static/IMAGES/header-mma.jpg");
+    min-height: 100%;
+}
+
+.headimgtxt{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 70px;
+    letter-spacing: 70px;
+    text-transform: uppercase;
+}
+
+.holdingcontainer {
+    width: 1500px;
+    max-width: 90%;
+    height: 200px;
+    display: flex;
+    box-sizing: content-box;
+    flex-direction: row;
+    padding-left: 50px;
+    margin-bottom: 5px;
+  }
+
+  .bodyimg1{
+      background-image: url("/static/IMAGES/silva.jpg");
+      min-height: 400px;
+      margin-top: auto;
+  }
+  
+  .bodyimgtext{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 110px;
+    letter-spacing: 70px;
+    text-transform: uppercase;
+  }
+
+.button1{
+    display: block;
+    margin: 0 auto;
+    top: -50%;
+    font-family: "Lato";
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #FFF;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+   
+    border-radius: 25px;
+}
+
+.button1{
+    background-image: linear-gradient(to right, #303030 0%, #1a1a1a 50%, #000000 100%)
+}
+
+
+  .holdingcontainer2 {
+    width: 2500px;
+    max-width: 90%;
+    height: 250px;
+    display: flex;
+    letter-spacing: 0.0625em;
+    background: white;
+    padding-left: 50px;
+    box-sizing: content-box;
+    flex-direction: row;
+    margin-top: 100px;
+  } 
+  .button2{
+    display: block;
+    margin: 0 auto;
+    top: -50%;
+    font-family: "Lato";
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #FFF;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+   
+    border-radius: 25px;
+}
+
+.button2{
+    background-image: linear-gradient(to right, #303030 0%, #1a1a1a 50%, #000000 100%)
+}
+  .bodyimg2{
+    background-image: url("/static/IMAGES/holm.jpg");
+    min-height: 700px;
+  }
+  
+  .bodyimgtext2{
+    position: absolute;
+    padding-top: 40px;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 110px;
+    letter-spacing: 70px;
+    text-transform: uppercase;
+  }
+ 
+
+  .holdingcontainer3{
+    width: 100px;
+    max-width: 90%;
+    height: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    letter-spacing: 0.0625em;
+    background: white;
+    box-sizing: content-box;
+    padding-left: 50px;
+
+  }
+
+  .logo-text{
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 50px;
+    text-align: center;
+  }
+  .footer {
+    background: #fff;
+    width: 100%;
+    font-family: "brandon"-grotesque;
+    font-display: #000;
+    
+  }
+  
+  .footer .footer-content {
+    flex: 1;
+    font-family: "terminal";
+    height: 250px;
+    width: 100%;
+    text-align: center;
+  }
+  .fas-fa-envelope{
+      font-size: 20px;
+      text-align: center;
+     }
+  
+  .parallax-container {
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  @media (max-width: 568px) {
+    .holdingcontainer {
+      flex-direction: row;
+    }
+  }
+
+  @media (max-width: 568px) {
+    .holdingcontainer2 {
+      flex-direction: row;
+    }
+
+  }
+  @media (max-width: 568px) {
+    .holdingcontainer3 {
+      flex-direction: row;
+    }
+  }
+  
+  @media (max-width: 568px) {
+    .bodyimg1,
+    .bodyimg2,
+    .bodyimg3 {
+      background-attachment: scroll;
+    }
+  }
 
