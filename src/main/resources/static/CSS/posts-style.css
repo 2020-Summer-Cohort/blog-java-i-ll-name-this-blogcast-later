@@ -41,7 +41,7 @@ ul li{
 }
 
 .headimg{
-    background-image: url("/IMAGES/izzygif.gif");
+    background-image: url("../IMAGES/izzygif.gif");
     min-height: 100%;
 }
 

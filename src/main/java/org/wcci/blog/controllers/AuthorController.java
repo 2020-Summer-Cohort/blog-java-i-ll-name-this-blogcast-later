@@ -23,10 +23,16 @@ public class AuthorController {
         return "author-template";
     }
 
+    @RequestMapping("authors/")
+    public String showAllAuthors(Model model){
+        model.addAttribute("authors", authorStorage.findAllAuthors());
+        return "authors-template";
+    }
+
     @PostMapping("authors/add")
     public String addAuthor(String firstName, String lastName){
         Author authorToAdd = new Author(firstName,lastName);
         authorStorage.save(authorToAdd);
-        return "redirect:/authors/";
+        return "redirect:/";
     }
 }

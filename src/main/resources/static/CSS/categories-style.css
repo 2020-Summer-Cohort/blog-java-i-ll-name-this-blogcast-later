@@ -44,7 +44,7 @@ body, html {
   }
   
   .headimg{
-      background-image: url("/IMAGES/Hunt\ Gif.gif");
+      background-image: url("../IMAGES/Hunt\ Gif.gif");
       min-height: 100%;
   }
   

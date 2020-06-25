@@ -44,7 +44,7 @@ ul li{
 }
 
 .headimg{
-    background-image: url("/IMAGES/rose\ gif.gif");
+    background-image: url("../IMAGES/rose\ gif.gif");
     min-height: 100%;
 }
 
