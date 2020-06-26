@@ -1,6 +1,9 @@
 package org.wcci.blog.entities;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -13,7 +16,8 @@ public class Post {
     private String description;
     @ManyToOne
     private Author author;
-    private LocalDateTime publishDate;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private LocalDate publishDate;
     @ManyToOne
     private Category category;
     @ManyToOne
@@ -21,7 +25,7 @@ public class Post {
 
     protected Post(){}
 
-    public Post(String title, String description, Author author, LocalDateTime publishDate, Category category, Tag tag) {
+    public Post( String title, String description, Author author, LocalDate publishDate, Category category, Tag tag) {
         this.title = title;
         this.description = description;
         this.author = author;
@@ -29,6 +33,7 @@ public class Post {
         this.category = category;
         this.tag = tag;
     }
+
 
     public Long getId() {
         return id;
@@ -46,7 +51,7 @@ public class Post {
         return author;
     }
 
-    public LocalDateTime getPublishDate() {
+    public LocalDate getPublishDate() {
         return publishDate;
     }
 
