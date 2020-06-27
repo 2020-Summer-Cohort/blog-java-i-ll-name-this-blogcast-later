@@ -34,6 +34,9 @@ public class Post {
         this.tag = tag;
     }
 
+    public Post(String title, String description, Author author, LocalDateTime publishDate, Category category, Tag tag) {
+    }
+
 
     public Long getId() {
         return id;
@@ -90,4 +93,7 @@ public class Post {
     public int hashCode() {
         return id != null ? id.hashCode() : 0;
     }
+
+
+
 }

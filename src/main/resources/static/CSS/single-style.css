@@ -15,7 +15,7 @@ body, html {
       background-size: cover;
       background-repeat: no-repeat;
       background-attachment: fixed;
-      image-resolution: 70%;
+      image-resolution: 100%;
   }
 
   nav{
@@ -49,7 +49,7 @@ ul li{
 }
 
 .headimg{
-    background-image: url("/IMAGES/rose\ gif.gif");
+    background-image: url("/IMAGES/ring\ gif.gif");
     min-height: 100%;
 }
 
@@ -76,62 +76,12 @@ ul li{
     margin-bottom: 100px;
     font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #665;
+    margin-bottom: 200px;
   }
 
-  .holdingcontainer2 {
-    width: 1500px;
-    max-width: 90%;
-    height: 700px;
-    display: flex;
-    box-sizing: content-box;
-    flex-direction: column;
-    padding-left: 50px;
-    margin-bottom: 100px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #665;
-  }
+  
 
-  .post-form{
-    margin:0;
-    padding: 0;
-    box-shadow: border-box;
-    font-family:'Roboto', sans-serif;
-  }
-  
-  .wrapper{
-  
-    top: 50%;
-    width: 100%;
-    padding: 0 20px;
-  }
-  
-  .post-form{
-    max-width: 550px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .input-fields{
-    display: flex;
-    flex-direction: column;
-    margin-right: 4%;
-  }
-  
-  .input-fields,
-  .post{
-  max-width: 48%;
-  }
-  
-  .input-fields .input, .description textarea{
-    margin: 10px 0;
-    }
-  
-  .description textarea {
-    max-width: 300px;
-    max-height: 150px;
-    padding-bottom: 50px;
-  }
+ 
   
   #btn{
   border: 0;
@@ -144,8 +94,7 @@ ul li{
   cursor: pointer;
   transition: .5s;
   background: ease;
-      
-  
+       
   }
   
   .logo-text{
@@ -160,6 +109,7 @@ ul li{
       width: 100%;
       font-family: "brandon"-grotesque;
       font-display: #000;
+      margin-bottom: 50px;
       
     }
     

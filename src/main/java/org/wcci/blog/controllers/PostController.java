@@ -47,7 +47,7 @@ public class PostController {
     public String addPost(String title, String description, Author author, LocalDateTime publishDate, Category category, Tag tag){
         Post postToAdd = new Post(title, description, author, publishDate, category, tag);
         postStorage.save(postToAdd);
-        return "redirect:/";
+        return "redirect:/posts/" + postToAdd.getTitle();
     }
 
 }

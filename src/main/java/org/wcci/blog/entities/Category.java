@@ -16,10 +16,12 @@ public class Category {
     private Collection<Post> posts;
 
     protected Category(){}
+private String categoryName;
 
     public Category(String name, Post... posts) {
         this.name = name;
         this.posts = new ArrayList<>(Arrays.asList(posts));
+        this.categoryName=categoryName;
     }
 
     public Long getId() {
@@ -28,6 +30,10 @@ public class Category {
 
     public String getName() {
         return name;
+    }
+
+    public String getCategoryName(){
+        return categoryName;
     }
 
     public Collection<Post> getPosts() {
