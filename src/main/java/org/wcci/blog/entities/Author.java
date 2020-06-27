@@ -13,7 +13,7 @@ public class Author {
     private Long id;
     private String firstName;
     private String lastName;
-    @OneToMany
+    @OneToMany (mappedBy = "author")
     private Collection<Post> posts;
 
     public Author() {}

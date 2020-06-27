@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Authors</title>
-    <link rel="stylesheet" href="CSS/authors-style.css"/>
+    <link rel="stylesheet" href="../CSS/authors-style.css"/>
 </head>
 <body>
 <div class ="headimg">
     <nav>
         <ul>
-            <li><a href="home.html" style="text-decoration: none;">Home</a></li>
-            <li><a href="posts.html" style="text-decoration: none;">Posts</a></li>
-            <li><a href="authors.html" style="text-decoration: none;">Categories</a></li>
-            <li><a href="tags.html" style="text-decoration: none;">Tags</a></li>
+            <li><a th:href="@{'../'}" style="text-decoration: none;">Home</a></li>
+            <li><a th:href="@{'../posts/'}" style="text-decoration: none;">Posts</a></li>
+            <li><a th:href="@{'../categories/'}" style="text-decoration: none;">Categories</a></li>
+            <li><a th:href="@{'../tags/'}" style="text-decoration: none;">Tags</a></li>
         </ul>
     </nav>
 </div>
@@ -23,32 +23,17 @@
 </div>
 
 <main>
-    <div class="body2"   a link="black" vlink="black">
+    <div class="body2" a link="black" vlink="black">
         <div class="holdingcontainer">
             <ul th:each="author : ${authors}">
-                <h1>Authors</h1>
+                <h1>Author</h1>
                 <h2 th:text="${author.firstName}+${author.lastName}">Garret K.</h2>
-                <li th:each="post : ${posts}">
-                    <a th:text="${post.title}" th:href="@{'../posts/'+${post.title}}" style="text-decoration: none;">Title Of A Post</a>
+                <li th:each="post : ${author.posts}">
+                    <a class="body2" th:text="${post.title}" th:href="@{'../posts/'+${post.title}}" style="text-decoration: none;">Title Of A Post</a>
                 </li>
             </ul>
-
         </div>
     </div>
-
-    <div class="body3">
-        <div class="holdingcontainer2">
-            <ul>
-                <h2>Jim Ross</h2>
-
-                <li><a href="" style="text-decoration: none;">Title Of A Post</a></li>
-                <li><a href="" style="text-decoration: none;">Title Of A Post</a></li>
-                <li><a href="" style="text-decoration: none;">Title Of A Post</a></li>
-                <li><a href="" style="text-decoration: none;">Title Of A Post</a></li>
-            </ul>
-        </div>
-    </div>
-
 </main>
 
 <div class="wrapper">
@@ -57,7 +42,7 @@
             <input type="text" class="input" placeholder="Author">
             <input type="text" class="input" placeholder="Category">
         </div>
-        <div ><a href="" style="text-decoration: none;">Submit</a></div>
+        <div><a href="" style="text-decoration: none;">Submit</a></div>
     </div>
 </div>
 

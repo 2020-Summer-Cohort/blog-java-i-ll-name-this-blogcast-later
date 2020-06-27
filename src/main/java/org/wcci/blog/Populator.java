@@ -69,7 +69,7 @@ public class Populator implements CommandLineRunner {
                 "                     the one who needs a camera. The undefeated striking virtuoso has amassed 12 MMA knockouts and a massive\n" +
                 "                     cult following. With a big win Saturday, that following could spill into the mainstream.", jimRoss, publishDate1, fighter, fightSkill);
 
-        Post octagonQuarantine = new Post("Garret Kim", "Covid-19 has affected too much of our everyday culture. So much so that the world will never be the same.\n" +
+        Post octagonQuarantine = new Post("Octagon Quarantine", "Covid-19 has affected too much of our everyday culture. So much so that the world will never be the same.\n" +
                 "The UFC is not excluded from the effects of this outrageous disease. Earlier this month UFC Fight Night 117\n" +
                 "and UFC 250 took place.\n" +
                 "With many intersesting fights including skillfull submissions or technical striking. The recent UFC bouts\n" +
@@ -82,7 +82,7 @@ public class Populator implements CommandLineRunner {
                 "grooming seem to go hand in hand with this MMA juggernaut, so it will come of no surprise when new greats\n" +
                 "rise.", garretKim,publishDate2, fights, events);
 
-        Post gloryDays = new Post("David Smith","The early days of UFC were filled with some of the most brutal KO's of and fights of any combat sport.\n" +
+        Post gloryDays = new Post("Glory Days","The early days of UFC were filled with some of the most brutal KO's of and fights of any combat sport.\n" +
                 "One to note is that of Mark \"the Hammer\" Coleman being knocked-out with a kick to the face\n" +
                 "by Petey Williams.\n" +
                 "That KO sticks out because it was before the UFC banned strikes by foot while fighters wore shoes.\n" +

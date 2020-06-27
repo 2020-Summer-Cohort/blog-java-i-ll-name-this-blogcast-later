@@ -34,6 +34,14 @@ a:visited{
   color: white;
 }
 
+a.body2{
+    color: black
+}
+
+v.body2{
+    color: black
+}
+
 ul{
     list-style: none;
     text-align: center;
