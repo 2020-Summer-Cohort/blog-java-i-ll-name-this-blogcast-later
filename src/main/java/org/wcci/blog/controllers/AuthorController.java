@@ -2,30 +2,27 @@ package org.wcci.blog.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.wcci.blog.entities.Author;
 import org.wcci.blog.storage.AuthorStorage;
+import org.wcci.blog.storage.PostStorage;
 
 @Controller
 public class AuthorController {
 
     private AuthorStorage authorStorage;
+    private PostStorage postStorage;
 
-    public AuthorController(AuthorStorage authorStorage) {
+    public AuthorController(AuthorStorage authorStorage, PostStorage postStorage) {
         this.authorStorage = authorStorage;
-    }
-
-    @RequestMapping("authors/{id}")
-    public String showSingleAuthor(@PathVariable Long id, Model model){
-        model.addAttribute("author", authorStorage.findAuthorById(id));
-        return "author-template";
+        this.postStorage = postStorage;
     }
 
     @RequestMapping("authors/")
     public String showAllAuthors(Model model){
         model.addAttribute("authors", authorStorage.findAllAuthors());
+        model.addAttribute("posts",postStorage.findAllPosts());
         return "authors-template";
     }
 

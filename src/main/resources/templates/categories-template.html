@@ -1,10 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categories</title>
+    <link rel="stylesheet" href="CSS/categories-style.css"/>
 </head>
 <body>
+<div class ="headimg">
+    <nav>
+        <ul>
+            <li><a href="home.html" style="text-decoration: none;">Home</a></li>
+            <li><a href="posts.html" style="text-decoration: none;">Posts</a></li>
+            <li><a href="authors.html" style="text-decoration: none;">Authors</a></li>
+            <li><a href="tags.html" style="text-decoration: none;">Tags</a></li>
+        </ul>
+    </nav>
+</div>
+<div class="headimgtxt">
+    <span class="border trans">CATEGORIES</span>
+</div>
 
+<main>
+    <div class="body2">
+        <div class="holdingcontainer">
+            <ul th:each="category : ${categories}">
+                <h1>Categories</h1>
+                <h2 th:text="${category.name}">Fights</h2>
+                <li th:each="post : ${posts}">
+                    <a th:text="${post.title}" th:href="@{'../posts/'+${post.title}}" style="text-decoration: none;">Title Of A Post</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="body2">
+        <div class="holdingcontainer2">
+            <ul>
+                <h2>Fighters</h2>
+                <li><a href="" style="text-decoration: none;">Title Of A Post</a></li>
+                <li><a href="" style="text-decoration: none;">Title Of A Post</a></li>
+                <li><a href="" style="text-decoration: none;">Title Of A Post</a></li>
+                <li><a href="" style="text-decoration: none;">Title Of A Post</a></li>
+            </ul>
+        </div>
+    </div>
+
+</main>
+
+<form action="">
+    <label for="">Category:</label>
+    <input type="text">
+    <button>Submit</button>
+</form>
+
+<footer>
+    FOOTER -This is where the name of our blog site will go and the year 2020
+</footer>
 </body>
 </html>

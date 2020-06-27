@@ -1,10 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post</title>
+    <link rel="stylesheet" href="CSS/tags-style.css"/>
 </head>
 <body>
+<div class ="headimg">
+    <nav>
+        <ul>
+            <li><a href="home.html" style="text-decoration: none;">Home</a></li>
+            <li><a href="posts.html" style="text-decoration: none;">Posts</a></li>
+            <li><a href="authors.html" style="text-decoration: none;">Authors</a></li>
+            <li><a href="tags.html" style="text-decoration: none;">Categories</a></li>
+        </ul>
+    </nav>
+</div>
+<div class="headimgtxt">
+    <span class="border trans">TAGS</span>
+</div>
 
+<main>
+    <div class="holdingcontainer">
+        <ul>
+            <li th:each="tag : ${tags}">
+                <a th:text="${tag.name}">#Fights</a>
+            </li>
+            <li th:each="post : ${posts}">
+                <a th:text="${post.title}" th:href="@{'../posts/'+${post.title}}">Title of Post</a>
+            </li>
+        </ul>
+    </div>
+    <div class="holdingcontainer2">
+        <form action="">
+            <label for="">Tag:</label>
+            <input type="text">
+            <button>Submit</button>
+        </form>
+    </div>
+</main>
+
+
+<footer>
+    <h1 class="logo-text"><span>Fight </span>Blog</h1>
+    <span
+    ><i class="fas-fa-envelope"></i> &nbsp;
+              e-mail@notyet.com</span>
+    <close> Images Owned by the UFC for ZUFFA. Not for profit use.</close>
+</footer>
 </body>
 </html>

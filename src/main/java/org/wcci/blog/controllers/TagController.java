@@ -2,30 +2,27 @@ package org.wcci.blog.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.wcci.blog.entities.Tag;
+import org.wcci.blog.storage.PostStorage;
 import org.wcci.blog.storage.TagStorage;
 
 @Controller
 public class TagController {
 
     private TagStorage tagStorage;
+    private PostStorage postStorage;
 
-    public TagController(TagStorage tagStorage) {
+    public TagController(TagStorage tagStorage, PostStorage postStorage) {
         this.tagStorage = tagStorage;
-    }
-
-    @RequestMapping("tags/{name}")
-    public String showSingleTag(@PathVariable String name, Model model){
-        model.addAttribute("tag", tagStorage.findTagByName(name));
-        return "tag-template";
+        this.postStorage = postStorage;
     }
 
     @RequestMapping("tags/")
     public String showAllTags(Model model){
         model.addAttribute("tags", tagStorage.findAllTags());
+        model.addAttribute("posts",postStorage.findAllPosts());
         return "tags-template";
     }
 
