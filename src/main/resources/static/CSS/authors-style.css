@@ -34,7 +34,12 @@ a:visited{
   color: white;
 }
 
-a.body2{
+.body2{
+  display: flex;
+  justify-content: center;
+}
+
+a.body2:visited{
     color: black
 }
 
@@ -97,63 +102,63 @@ ul li{
     margin-bottom: 100px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #665;
+
+
+  }.wrapper{
+    display: flex;
+    justify-content: center;
+    top: 50%;
+    width: 100%;
+    padding: 0 20px;
   }
 
-  .post-form{
+  .form{
     margin:0;
     padding: 0;
     box-shadow: border-box;
     font-family:'Roboto', sans-serif;
   }
   
-  .wrapper{
   
-    top: 50%;
-    width: 100%;
-    padding: 0 20px;
-  }
   
-  .post-form{
+  .form{
     max-width: 550px;
-    margin: 0 auto;
+    margin: 0 40px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 30px;
   }
   
   .input-fields{
     display: flex;
     flex-direction: column;
     margin-right: 4%;
+    width: 350px;
+   
   }
-  
-  .input-fields,
-  .post{
-  max-width: 48%;
-  }
+
   
   .input-fields .input, .description textarea{
+    height: 60px;
     margin: 10px 0;
+    font-size: 30px;
     }
   
-  .description textarea {
-    max-width: 300px;
-    max-height: 150px;
-    padding-bottom: 50px;
-  }
-  
-  #btn{
-  border: 0;
-  background: rgb(1, 48, 36);
-  padding: .5rem;
-  color: white;
-  margin: 1rem 0;
-  width: auto;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: .5s;
-  background: ease;
-      
-  
+  .btn{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    border: 0;
+    padding: .5rem;
+    background-color: #000;
+    margin: 1rem 0;
+    width: auto;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-bottom: 30px;    
+    text-align: center;
+    font-size: 25px;
   }
   
   .logo-text{

@@ -26,7 +26,7 @@
     <div class="body2" a link="black" vlink="black">
         <div class="holdingcontainer">
             <ul th:each="author : ${authors}">
-                <h2 th:text="${author.firstName}+${author.lastName}">Garret K.</h2>
+                <h2 th:text="${author.firstName}+ ${author.lastName}">Garret K.</h2>
                 <li th:each="post : ${author.posts}">
                     <a class="body2" th:text="${post.title}" th:href="@{'../posts/'+${post.title}}" style="text-decoration: none;">Title Of A Post</a>
                 </li>
@@ -36,13 +36,16 @@
 </main>
 
 <div class="wrapper">
-    <div class="post-form">
+    <form class="post-form" action="/authors/add" method="POST">
         <div class="input-fields">
-            <input type="text" class="input" placeholder="Author">
-            <input type="text" class="input" placeholder="Category">
+            <input type="text" class="input" name="firstName" placeholder="First Name">
+            <input type="text" class="input" name="lastName" placeholder="Last Name">
         </div>
-        <div><a href="" style="text-decoration: none;">Submit</a></div>
-    </div>
+
+        <button class="btn" type="submit" id="submit">Submit</button>
+    </form>
+
+
 </div>
 
 <footer>

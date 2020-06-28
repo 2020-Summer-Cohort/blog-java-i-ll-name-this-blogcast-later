@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.wcci.blog.entities.Author;
+import org.wcci.blog.repositories.AuthorRepository;
 import org.wcci.blog.storage.AuthorStorage;
 import org.wcci.blog.storage.PostStorage;
 
@@ -13,10 +14,13 @@ public class AuthorController {
 
     private AuthorStorage authorStorage;
     private PostStorage postStorage;
+    private AuthorRepository authorRepository;
 
-    public AuthorController(AuthorStorage authorStorage, PostStorage postStorage) {
+
+    public AuthorController(AuthorStorage authorStorage, PostStorage postStorage, AuthorRepository authorRepository) {
         this.authorStorage = authorStorage;
         this.postStorage = postStorage;
+        this.authorRepository = authorRepository;
     }
 
     @RequestMapping("authors/")
@@ -29,7 +33,7 @@ public class AuthorController {
     @PostMapping("authors/add")
     public String addAuthor(String firstName, String lastName){
         Author authorToAdd = new Author(firstName,lastName);
-        authorStorage.save(authorToAdd);
-        return "redirect:/";
+        authorRepository.save(authorToAdd);
+        return "redirect:/authors/";
     }
 }
