@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categories</title>
-    <link rel="stylesheet" href="CSS/categories-style.css"/>
+    <link rel="stylesheet" href="../CSS/categories-style.css"/>
 </head>
 <body>
 <div class ="headimg">
@@ -28,25 +28,12 @@
             <ul th:each="category : ${categories}">
                 <h1>Categories</h1>
                 <h2 th:text="${category.name}">Fights</h2>
-                <li th:each="post : ${posts}">
+                <li th:each="post : ${category.posts}">
                     <a th:text="${post.title}" th:href="@{'../posts/'+${post.title}}" style="text-decoration: none;">Title Of A Post</a>
                 </li>
             </ul>
         </div>
     </div>
-
-    <div class="body2">
-        <div class="holdingcontainer2">
-            <ul>
-                <h2>Fighters</h2>
-                <li><a href="" style="text-decoration: none;">Title Of A Post</a></li>
-                <li><a href="" style="text-decoration: none;">Title Of A Post</a></li>
-                <li><a href="" style="text-decoration: none;">Title Of A Post</a></li>
-                <li><a href="" style="text-decoration: none;">Title Of A Post</a></li>
-            </ul>
-        </div>
-    </div>
-
 </main>
 
 <form action="">

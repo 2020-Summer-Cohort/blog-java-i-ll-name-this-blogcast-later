@@ -26,7 +26,6 @@
     <div class="body2" a link="black" vlink="black">
         <div class="holdingcontainer">
             <ul th:each="author : ${authors}">
-                <h1>Author</h1>
                 <h2 th:text="${author.firstName}+${author.lastName}">Garret K.</h2>
                 <li th:each="post : ${author.posts}">
                     <a class="body2" th:text="${post.title}" th:href="@{'../posts/'+${post.title}}" style="text-decoration: none;">Title Of A Post</a>
@@ -53,7 +52,6 @@
                   e-mail@notyet.com</span>
     <close> Images Owned by the UFC for ZUFFA. Not for profit use.</close>
 </footer>
-
 
 </body>
 </html>
