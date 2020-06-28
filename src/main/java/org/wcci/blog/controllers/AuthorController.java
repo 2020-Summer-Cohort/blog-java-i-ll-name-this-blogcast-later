@@ -31,8 +31,8 @@ public class AuthorController {
     }
 
     @PostMapping("authors/add")
-    public String addAuthor(String firstName, String lastName){
-        Author authorToAdd = new Author(firstName,lastName);
+    public String addAuthor(String name){
+        Author authorToAdd = new Author(name);
         authorRepository.save(authorToAdd);
         return "redirect:/authors/";
     }

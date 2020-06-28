@@ -11,16 +11,16 @@ public class Author {
     @Id
     @GeneratedValue
     private Long id;
-    private String firstName;
-    private String lastName;
+    private String name;
+
     @OneToMany (mappedBy = "author")
     private Collection<Post> posts;
 
     public Author() {}
 
-    public Author(String firstName, String lastName, Post... posts) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public Author(String name, Post... posts) {
+        this.name = name;
+
         this.posts = new ArrayList<>(Arrays.asList(posts));
     }
 
@@ -28,40 +28,36 @@ public class Author {
         return id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return name;
     }
 
-    public String getLastName() {
-        return lastName;
-    }
 
     public Collection<Post> getPosts() {
         return posts;
     }
 
-//    @Override
-//    public String toString() {
-//        return "Author{" +
-//                "id=" + id +
-//                ", firstName='" + firstName + '\'' +
-//                ", lastName='" + lastName + '\'' +
-//                ", posts=" + posts +
-//                '}';
-//    }
-//
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//
-//        Author author = (Author) o;
-//
-//        return id != null ? id.equals(author.id) : author.id == null;
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        return id != null ? id.hashCode() : 0;
-//    }
+    @Override
+    public String toString() {
+        return "Author{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", posts=" + posts +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Author author = (Author) o;
+
+        return id != null ? id.equals(author.id) : author.id == null;
+    }
+
+    @Override
+    public int hashCode() {
+        return id != null ? id.hashCode() : 0;
+    }
 }

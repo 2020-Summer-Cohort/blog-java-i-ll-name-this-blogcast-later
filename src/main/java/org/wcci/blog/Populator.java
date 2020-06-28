@@ -30,9 +30,9 @@ public class Populator implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        Author jimRoss = new Author("Jim","Ross");
-        Author garretKim = new Author("Garret","Kim");
-        Author davidSmith = new Author("David","Smith");
+        Author jimRoss = new Author("Jim Ross");
+        Author garretKim = new Author("Garret Kim");
+        Author davidSmith = new Author("David Smith");
 
         authorRepository.save(jimRoss);
         authorRepository.save(garretKim);
