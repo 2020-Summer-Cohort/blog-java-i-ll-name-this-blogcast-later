@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post</title>
-    <link rel="stylesheet" href="CSS/single-style.css"/>
+    <link rel="stylesheet" href="../CSS/single-style.css"/>
 </head>
 <body a link="white" vlink="white">
 <div class ="headimg">
@@ -24,7 +24,7 @@
 
 <div class="holdingcontainer">
     <h1 th:text="${singlePost.title}">Just Izzy</h1>
-    <a th:text="${singlePost.author}" th:href="@{'../authors/'+${singlePost.author.firstName}+${singlePost.author.lastName}}" class="class1" style="text-decoration: none;">Jim Ross</a>
+    <a th:text="${singlePost.author.firstName}+${singlePost.author.lastName}" th:href="@{'../authors/'+${singlePost.author.firstName}+${singlePost.author.lastName}}" class="class1" style="text-decoration: none;">Jim Ross</a>
     <p th:text="${singlePost.publishDate}" >June 6th, 2020</p>
     <p th:text="${singlePost.description}">
         Since his early MMA fighting days Israel Adesanya was recognized as a star on the rise or at least one to watch.
@@ -39,7 +39,7 @@
         the one who needs a camera. The undefeated striking virtuoso has amassed 12 MMA knockouts and a massive
         cult following. With a big win Saturday, that following could spill into the mainstream.
     </p>
-    <a th:text="${singlePost.tag}" th:href="@{'../tags/'+${singlePost.tag.name}}" class="tags" style="text-decoration: none;">#Fighters</a>
+    <a th:text="${singlePost.tag.name}" th:href="@{'../tags/'+${singlePost.tag.name}}" class="tags" style="text-decoration: none;">#Fighters</a>
 </div>
 <footer>
     <h1 class="logo-text"><span>Fight </span>Blog</h1>

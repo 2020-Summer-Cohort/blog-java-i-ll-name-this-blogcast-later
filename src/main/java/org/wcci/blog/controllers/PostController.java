@@ -34,7 +34,7 @@ public class PostController {
     @RequestMapping("posts/{title}")
     public String showSinglePost(@PathVariable String title, Model model){
         model.addAttribute("singlePost", postStorage.findPostByTitle(title));
-        return "posts-template";
+        return "post-template";
     }
 
     @RequestMapping("posts/")

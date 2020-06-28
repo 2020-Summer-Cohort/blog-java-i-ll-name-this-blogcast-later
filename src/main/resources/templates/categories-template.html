@@ -26,7 +26,6 @@
     <div class="body2">
         <div class="holdingcontainer">
             <ul th:each="category : ${categories}">
-                <h1>Categories</h1>
                 <h2 th:text="${category.name}">Fights</h2>
                 <li th:each="post : ${category.posts}">
                     <a th:text="${post.title}" th:href="@{'../posts/'+${post.title}}" style="text-decoration: none;">Title Of A Post</a>

@@ -31,8 +31,8 @@
             <ul>
                 <h2><a th:text="${post.title}" th:href="@{'../posts/'+${post.title}}" style="text-decoration: none;">Just Izzy</a></h2>
                 <li><a th:text="${post.publishDate}" href="" style="text-decoration: none;">6/25/2020</a></li>
-                <li><a th:text="${post.category}" th:href="@{'../categories/'+${post.category.name}}" style="text-decoration: none;">Fighters</a></li>
-                <li><a th:text="${post.tag}" th:href="@{'../tags/'+${post.tag.name}}" style="text-decoration: none;">#Fightskills</a></li>
+                <li><a th:text="${post.category.name}" th:href="@{'../categories/'+${post.category.name}}" style="text-decoration: none;">Fighters</a></li>
+                <li><a th:text="${post.tag.name}" th:href="@{'../tags/'+${post.tag.name}}" style="text-decoration: none;">#Fightskills</a></li>
             </ul>
             <p th:text="${post.description}"> Since his early MMA fighting days Israel Adesanya was recognized as a star on the rise or at least one to watch.
                 Today we can say that has come to pass three times over. Reigning champion and looking to rise beyond the
@@ -45,7 +45,7 @@
                 Derek Brunson at UFC 230. But he won't be a tourist there. He'll be The Last Stylebender, and you'll be
                 the one who needs a camera. The undefeated striking virtuoso has amassed 12 MMA knockouts and a massive
                 cult following. With a big win Saturday, that following could spill into the mainstream.</p>
-            <a th:text="${post.author}" th:href="@{'../authors/'+${post.author.firstName}+${post.author.lastName}}">Jim Ross</a>
+            <a th:text="${post.author.firstName}+${post.author.lastName}" th:href="@{'../authors/'+${post.author.firstName}+${post.author.lastName}}">Jim Ross</a>
         </div>
     </div>
 </main>
