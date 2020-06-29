@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.wcci.blog.entities.Tag;
+import org.wcci.blog.repositories.TagRepository;
 import org.wcci.blog.storage.PostStorage;
 import org.wcci.blog.storage.TagStorage;
 
@@ -30,6 +31,6 @@ public class TagController {
     public String addTag(String name){
         Tag tagToAdd = new Tag(name);
         tagStorage.save(tagToAdd);
-        return "redirect:/";
+        return "redirect:/tags/";
     }
 }

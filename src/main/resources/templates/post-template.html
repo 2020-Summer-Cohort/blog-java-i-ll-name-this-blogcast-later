@@ -24,7 +24,7 @@
 
 <div class="holdingcontainer">
     <h1 th:text="${singlePost.title}">Just Izzy</h1>
-    <a th:text="${singlePost.author.firstName}+${singlePost.author.lastName}" th:href="@{'../authors/'+${singlePost.author.firstName}+${singlePost.author.lastName}}" class="class1" style="text-decoration: none;">Jim Ross</a>
+    <a th:text="${singlePost.author.name}" th:href="@{'../authors/'+${singlePost.author.name}}" class="class1" style="text-decoration: none;">Jim Ross</a>
     <p th:text="${singlePost.publishDate}" >June 6th, 2020</p>
     <p th:text="${singlePost.description}">
         Since his early MMA fighting days Israel Adesanya was recognized as a star on the rise or at least one to watch.

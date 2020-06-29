@@ -20,7 +20,6 @@ public class Author {
 
     public Author(String name, Post... posts) {
         this.name = name;
-
         this.posts = new ArrayList<>(Arrays.asList(posts));
     }
 

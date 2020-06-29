@@ -9,6 +9,7 @@ import org.wcci.blog.entities.Author;
 import org.wcci.blog.entities.Category;
 import org.wcci.blog.entities.Post;
 import org.wcci.blog.entities.Tag;
+import org.wcci.blog.repositories.PostRepository;
 import org.wcci.blog.storage.AuthorStorage;
 import org.wcci.blog.storage.CategoryStorage;
 import org.wcci.blog.storage.PostStorage;
@@ -47,7 +48,7 @@ public class PostController {
     public String addPost(String title, String description, Author author, LocalDateTime publishDate, Category category, Tag tag){
         Post postToAdd = new Post(title, description, author, publishDate, category, tag);
         postStorage.save(postToAdd);
-        return "redirect:/posts/" + postToAdd.getTitle();
+        return "redirect:/posts/";
     }
 
 }

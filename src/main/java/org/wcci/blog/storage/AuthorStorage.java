@@ -26,4 +26,8 @@ public class AuthorStorage {
         return authorRepository.findById(id);
     }
 
+    public Author findAuthorByName(String author) {
+        return authorRepository.findByName(author);
+    }
+
 }

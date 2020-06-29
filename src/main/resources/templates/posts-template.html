@@ -45,23 +45,26 @@
                 Derek Brunson at UFC 230. But he won't be a tourist there. He'll be The Last Stylebender, and you'll be
                 the one who needs a camera. The undefeated striking virtuoso has amassed 12 MMA knockouts and a massive
                 cult following. With a big win Saturday, that following could spill into the mainstream.</p>
-            <a th:text="${post.author.firstName}+${post.author.lastName}" th:href="@{'../authors/'+${post.author.firstName}+${post.author.lastName}}">Jim Ross</a>
+            <a th:text="${post.author.name}" th:href="@{'../authors/'+${post.author.name}}">Jim Ross</a>
         </div>
     </div>
 </main>
 
 <div class="wrapper">
-    <div class="post-form">
+    <form class="post-form" action="/posts/add" method="POST">
         <div class="input-fields">
-            <input type="text" class="input" placeholder="Title">
-            <input type="text" class="input" placeholder="Date">
+            <input type="text" class="input" name="title" placeholder="Title">
+            <input type="text" class="input" name="author" placeholder="Author">
+            <input type="text" class="input" name="category" placeholder="Category">
+            <input type="text" class="input" name="publishDate" placeholder="Date">
+            <input type="text" class="input" name="tag" placeholder="Tag">
         </div>
 
         <div class="description">
-            <textarea placeholder="Post"></textarea>
+            <textarea placeholder="Post" name="description"></textarea>
             <div ><a href="" style="text-decoration: none;">Submit</a></div>
         </div>
-    </div>
+    </form>
 </div>
 
 

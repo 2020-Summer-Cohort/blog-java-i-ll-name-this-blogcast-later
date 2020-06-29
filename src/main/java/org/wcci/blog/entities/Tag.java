@@ -15,7 +15,7 @@ public class Tag {
     @GeneratedValue
     private Long id;
     private String name;
-    @OneToMany
+    @OneToMany (mappedBy = "tag")
     private Collection<Post> posts;
 
     protected Tag(){}

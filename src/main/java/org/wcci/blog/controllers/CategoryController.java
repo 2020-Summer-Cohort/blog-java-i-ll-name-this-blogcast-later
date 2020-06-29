@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.wcci.blog.entities.Category;
+import org.wcci.blog.repositories.CategoryRepository;
 import org.wcci.blog.storage.CategoryStorage;
 import org.wcci.blog.storage.PostStorage;
 
@@ -13,10 +14,13 @@ public class CategoryController {
 
     private CategoryStorage categoryStorage;
     private PostStorage postStorage;
+    private CategoryRepository categoryRepository;
 
-    public CategoryController(CategoryStorage categoryStorage, PostStorage postStorage) {
+
+    public CategoryController(CategoryStorage categoryStorage, PostStorage postStorage, CategoryRepository categoryRepository) {
         this.categoryStorage = categoryStorage;
         this.postStorage = postStorage;
+        this.categoryRepository = categoryRepository;
     }
 
     @RequestMapping("categories/")
@@ -29,8 +33,8 @@ public class CategoryController {
     @PostMapping("categories/add")
     public String addCategory(String name){
         Category categoryToAdd = new Category(name);
-        categoryStorage.save(categoryToAdd);
-        return "redirect:/";
+        categoryRepository.save(categoryToAdd);
+        return "redirect:/categories/";
     }
 
 
