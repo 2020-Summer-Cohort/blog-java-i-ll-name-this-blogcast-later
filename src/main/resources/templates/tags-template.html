@@ -24,11 +24,9 @@
 
 <main>
     <div class="holdingcontainer">
-        <ul>
-            <li th:each="tag : ${tags}">
-                <a th:text="${tag.name}">#Fights</a>
-            </li>
-            <li th:each="post : ${posts}">
+        <ul th:each="tag : ${tags}">
+            <h2 th:text="${tag.name}">#Fights</h2>
+            <li th:each="post : ${tag.posts}">
                 <a th:text="${post.title}" th:href="@{'../posts/'+${post.title}}">Title of Post</a>
             </li>
         </ul>
