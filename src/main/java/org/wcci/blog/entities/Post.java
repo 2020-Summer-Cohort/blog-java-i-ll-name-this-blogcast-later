@@ -36,10 +36,6 @@ public class Post {
         this.tag = tag;
     }
 
-    public Post(String title, String description, Author author, LocalDateTime publishDate, Category category, Tag tag) {
-    }
-
-
     public Long getId() {
         return id;
     }
